@@ -1,0 +1,106 @@
+:root {
+    --primary-color: #004097;
+
+    --primary-color-rgb: 0 64 151;
+
+    --base-bg-color: #fff;
+    --secondary-bg-color: #F8F8F8;
+    --tertiary-bg-color: #F5F5F5;
+    --fourth-bg-color: #F1F7FF;
+
+    --white-color: #fff;
+    --black-color: #000;
+
+
+    --base-font-color: #333333;
+    --secondary-font-color: #777777;
+
+    --base-border-color: #ddd;
+    --secondary-border-color: #efefef;
+
+    --base-font-family: "Inter", "Noto Sans JP";
+    --en-font-family: "brandon-grotesque", "Inter", "Noto Sans JP";
+    // --accent-font-family: "Inter", "Noto Sans JP";
+    --num-font-family: "din-2014";
+
+
+    --base-letter-spacing: .05em;
+    --base-weight: 400;
+    --base-line-height: 1.5;
+    --base-p-line-height: 2;
+    --base-font-size: 15px;
+
+    @media #{global.$md} {
+        --base-font-size: 16px;
+    }
+}
+
+*, ::before, ::after {
+    border-color: var(--base-border-color);
+}
+
+body {
+    font-family: var(--base-font-family);
+    color: var(--base-font-color);
+    letter-spacing: var(--base-letter-spacing);
+    font-weight: var(--base-weight);
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+    
+    border-color: var(--base-border-color);
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: var(--base-p-line-height);
+}
+
+input[type="text"],
+textarea {
+    border: 2px solid var(--base-border-color);
+    border-radius: 4px;
+    min-height: 48px;
+    padding: 8px;
+    background: var(--secondary-bg-color);
+    transition: .3s;
+}
+
+input[type="text"]:focus:not([type="submit"]),
+textarea:focus,
+select:focus {
+    box-shadow: 0 0 10px rgba(var(--form-input-fucused-shadow-color-rgb), 0.5);
+    outline: none;
+    border: 2px solid var(--form-input-fucused-border-color);;
+}
+
+textarea {
+    min-height: 198px;
+    padding: 16px;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 12L0 0L14 0L7 12Z' fill='%233B3B3B'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 14px auto; /* 画像のサイズ（幅 高さ）*/
+    background-position: right 12px center; /* 画像の位置 */
+    min-height: 48px;
+
+    cursor: pointer;
+
+    border: 2px solid var(--base-border-color);
+    border-radius: 4px;
+    min-height: 56px;
+    padding: 8px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--white-color);
+    transition: .3s;
+}
+
+label{
+    user-select: none;
+}
